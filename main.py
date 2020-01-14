@@ -19,8 +19,6 @@ def capture():
 		pixelated = cv2.resize(gray, size, interpolation=cv2.INTER_LINEAR)
 		pixelated = cv2.flip(pixelated, 1)
 		draw_ascii(pixelated)
-		if cv2.waitKey(1) & 0xFF == ord('q'):
-			break
 	cap.release()
 
 capture()
